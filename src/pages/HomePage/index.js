@@ -46,6 +46,33 @@ const HomePage = () => {
                     })}
                   </>
                 );
+              } else if (
+                item.categorySubTypeEngName === 'Galaxy Z' ||
+                item.categorySubTypeEngName === 'Galaxy S'
+              ) {
+                return (
+                  <>
+                    {item.modelList.map((model) => {
+                      return (
+                        <ProductItem
+                          key={model.id}
+                          title={model.displayName}
+                          image={model.galleryImage[0]}
+                          localBenefitList={item.localBenefitList}
+                          stock={model.ctaType}
+                          price={model.price}
+                          msrpPrice={model.msrpPrice}
+                          rating={financial(model.ratings)}
+                          storePromotions={model.storePromotions}
+                          reviewCount={model.reviewCount}
+                          color={model.fmyChipList[0].fmyChipLocalName}
+                          usp={model.usp}
+                          mobilememory={model.fmyChipList[1].fmyChipCode}
+                        />
+                      );
+                    })}
+                  </>
+                );
               }
             })}
       </div>
