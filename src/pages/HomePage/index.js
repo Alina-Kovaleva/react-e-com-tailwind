@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import Axios from 'axios';
 import { API_URL } from '../../config';
-import { ProductItem } from '../../components';
+import { HeroBanner, ProductItem } from '../../components';
 
 function financial(x) {
   return Number.parseFloat(x).toFixed(1);
@@ -19,7 +19,8 @@ const HomePage = () => {
 
   return (
     <div className="container m-auto mt-4 px-4">
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4"'>
+      <HeroBanner />
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto">
         {!data
           ? 'Loading'
           : data.map((item) => {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <nav className="flex h-12 justify-between items-center px-4 shadow-md">
+    <nav className="sticky top-0 z-30 flex h-12 bg-white justify-between items-center px-4 shadow-md">
       <Link to="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
